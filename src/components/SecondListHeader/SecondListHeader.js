@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./SecondListHeader.css";
 import Flex from "../Flex/Flex";
 import { BiLinkAlt, BiSolidFolder } from "react-icons/bi";
 import { BsFillTagFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { Category, TopTags } from "../../data";
+import { TypeContext } from "../../Context/TypeCardsContext";
 export default function SecondListHeader(props) {
+  const { TypeName, setTypeName } = useContext(TypeContext);
   return (
     <Flex
       transform={props.transform}
@@ -19,10 +21,14 @@ export default function SecondListHeader(props) {
         <ul>
           {Category.map((pro) => {
             return (
-              <Link
-                to={`/shop/${pro.product}`}
-              >
-                <li key={pro.id}>
+              <Link to={`/shop`}>
+                <li
+                  onClick={() => {
+                    localStorage.setItem("TypeNameProduct", pro.id);
+                    setTypeName(pro.id);
+                  }}
+                  key={pro.id}
+                >
                   <BiSolidFolder className="iconList" />
                   {pro.product}
                 </li>
@@ -54,9 +60,11 @@ export default function SecondListHeader(props) {
           <li>
             <BiLinkAlt className="iconList" /> About
           </li>
-          <li>
-            <BiLinkAlt className="iconList" /> FAQ
-          </li>
+          <Link to="/faq">
+            <li>
+              <BiLinkAlt className="iconList" /> FAQ
+            </li>
+          </Link>
           <li>
             <BiLinkAlt className="iconList" /> My Account
           </li>

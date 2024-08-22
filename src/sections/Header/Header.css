@@ -156,9 +156,9 @@
 .mainList{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     list-style: none;
-    font-size: 35px;
+    font-size: 30px;
     color: white;
 }
 .mainList li{
@@ -181,12 +181,13 @@
 }
 .mainList li:nth-child(2) span{
     background-color: red;
-    opacity: 0.5;
+    opacity: 0.7;
     color: white;
     border-radius: 30px;
-    padding: 5px 15px;
+    padding: 0px 15px;
     font-size: 30px;
     font-weight: 400;
+    margin-left: 5px;
 
 }
 .selectOne,

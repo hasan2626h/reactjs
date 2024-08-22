@@ -10,7 +10,7 @@ import TitleShadow from "../../components/TitleShadow/TitleShadow";
 import Title from "../../components/Title/Title";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import CardTypeProduct from "../../components/CardTypeProduct/CardTypeProduct";
-import { PersonCards, Products } from "../../data";
+import { PersonCards, SuperMarket } from "../../data";
 import CardPersons from "../../components/CardPersons/CardPersons";
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
           flexDirection={"column"}
         >
           <TitleShadow content={"XtraSupermarket"} />
-          <h1 className="secondH1">Fresher than Ever</h1>
+          <Title fontSize={"80px"} fontWeight={"600"} className="secondH1" content={"Fresher than Ever"} />
           <p className="paragraph">
             A supermarket is a self-service shop offering a wide variety of
             food, beverages and household products, organized into sections.
@@ -231,7 +231,7 @@ export default function Home() {
           </a>
         </Flex>
         <Flex className={"CardsTypeProduct"}>
-          {Products.map((pro) => {
+          {SuperMarket.map((pro) => {
             return (
               <CardTypeProduct
                 img={pro.img}

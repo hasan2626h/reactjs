@@ -18,10 +18,23 @@
     padding: 10px;
     background-color: #1C3E56;
 }
-/* Media Queries */
-@media (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1823px)
+{
     .linkFooter {
-        font-size: 22px; /* تقليل حجم الخط */
+        font-size: 16px; /* تقليل حجم الخط */
+        gap: 10px; /* تقليل الفجوة بين العناصر */
+    }
+
+    .linkFooter .iconLink {
+        font-size: 45px; /* تقليل حجم الأيقونة */
+        padding: 8px; /* تقليل الحشو */
+    }
+}
+/* Media Queries */
+@media (min-width: 992px) and (max-width: 1023px)
+    {
+    .linkFooter {
+        font-size: 16px; /* تقليل حجم الخط */
         gap: 10px; /* تقليل الفجوة بين العناصر */
     }
 
@@ -43,7 +56,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 768px) and (max-width: 991px)  {
     .linkFooter {
         flex-direction: column; /* تغيير الاتجاه إلى عمودي */
         font-size: 18px; /* تقليل حجم الخط أكثر */

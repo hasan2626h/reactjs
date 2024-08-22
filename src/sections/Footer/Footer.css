@@ -317,7 +317,7 @@
 /* التصميم المتجاوب */
 
 /* الشاشات المتوسطة (الأجهزة اللوحية) */
-@media (min-width: 992px){
+@media (min-width: 992px) and (max-width: 1823px) {
     .Footer {
         margin-top: 300px;
         position: relative;
@@ -343,7 +343,7 @@
         top: 142px;
     }
     .buttonSubscribe {
-        width: 350px !important;
+        width: 250px !important;
         height: 35px !important;
         padding-left: 20px !important;
         margin: 60px;

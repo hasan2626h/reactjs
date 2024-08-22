@@ -9,7 +9,7 @@ import { MdEmail } from 'react-icons/md'
 import { HiPhoneIncoming } from 'react-icons/hi'
 import { FaLocationDot } from 'react-icons/fa6'
 import BigButton from '../../components/BigButton/BigButton'
-export default function Contact() {
+export default function Contact(props) {
   return (
     <div className='contact'>
       <HeadInnerPages display={"none"} namePage={"Checkout"} />
@@ -32,8 +32,8 @@ export default function Contact() {
       </Flex>
       <Flex className={"bigBox"}>
         <Flex display={"flex"} alignItems={"center"} gap={"20px"}>
-            <TitleShadow content={"Get in touch"} />
-            <Title color={"white"} fontSize={"70px"} content={"with us"} />
+            <TitleShadow display={props.display} content={"Get in touch"} />
+            <Title display={props.display} color={"white"} fontSize={"70px"} content={"with us"} />
         </Flex>
         <Flex className={"inputs"}>
             <Input width={"400px"} label={"Your Name"} star={"*"} />

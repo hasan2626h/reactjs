@@ -9,7 +9,6 @@ import LeftTableCheckout from "../../components/LeftTableCheckout/LeftTableCheck
 import RightTableCheckout from "../../components/RightTableCheckout/RightTableCheckout";
 import HeadInnerPages from "../../components/HeadInnerPages/HeadInnerPages";
 export default function Checkout() {
-  const [valueInput, setValueInput] = useState([]);
   return (
     <Flex className="Checkout">
       <HeadInnerPages display={"flex"} namePage={"Checkout"} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.css";
 import HeadInnerPages from "../../components/HeadInnerPages/HeadInnerPages";
 import Flex from "../../components/Flex/Flex";
@@ -7,6 +7,9 @@ import TopBarBox from "../../components/TopBarBox/TopBarBox";
 import CardTypeProduct from "../../components/CardTypeProduct/CardTypeProduct";
 import BigButton from "../../components/BigButton/BigButton";
 export default function Cart() {
+  const[valueInput, setValueInput] = useState(0)
+  const increaseValue =() =>{setValueInput(x => x+1)}
+  const decrease =() =>{setValueInput(x => x-1)}
   return (
     <div className="Cart">
       <HeadInnerPages display={"flex"} namePage={"Cart"} />
@@ -46,9 +49,9 @@ export default function Cart() {
             <td>$99</td>
             <td>
               <Flex className={"decIncNumber"}>
-                <span className="circle">-</span>
-                <input type="number" className="inputNumber" />
-                <span className="circle">+</span>
+                <span onClick={() =>{decrease()}} className="circle">-</span>
+                <input type="number" value={valueInput} className="inputNumber" />
+                <span  onClick={() =>{increaseValue()}} className="circle">+</span>
               </Flex>
             </td>
             <td>$79</td>

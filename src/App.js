@@ -7,19 +7,29 @@ import Checkout from "./Pages/Checkout/Checkout";
 import Cart from "./Pages/Cart/Cart";
 import Contact from "./Pages/Contact/Contact";
 import Shop from "./Pages/Shop/Shop";
+import ProductInfo from "./Pages/ProductInfo/ProductInfo";
+import { ThemeProvider } from "./Context/ThemeContext";
+import FAQ from "./Pages/FAQ/FAQ";
+import { TypeProvider } from "./Context/TypeCardsContext";
 function App() {
   return (
-    <Router>
+    <ThemeProvider>
+      <TypeProvider>
+         <Router>
         <Header />
         <Routes>
-          <Route path="/react" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path={`/productInfo`} element={<ProductInfo />} />
+          <Route path={`/faq`} element={<FAQ />} />
         </Routes>
         <Footer />
       </Router>
+      </TypeProvider>
+    </ThemeProvider>
   );
 }
 
